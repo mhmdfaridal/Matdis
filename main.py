@@ -7,6 +7,7 @@ from kombinasi_batasan import kombinasiBatasan
 from permutasi_perulangan import permutasiPerulangan
 from permutasi_unsur_identik import permutasi_unsurIdentik
 from permutasi_melingkar import permutasiMelingkar
+from permutasi_dan_kombinasi import permutasiDanKombinasi
 
 if __name__ == "__main__":
 
@@ -16,11 +17,18 @@ if __name__ == "__main__":
 
         bersihkanLayar()
         menu()
-        pilihan = int(input("> "))
+
+        # Validasi input agar Enter/huruf tidak membuat program crash
+        try:
+            pilihan = int(input("> "))
+        except ValueError:
+            print("Pilihan Tidak Valid")
+            jeda()
+            continue
 
         if pilihan == 0:
             isRunning = False
-        if pilihan == 1:
+        elif pilihan == 1:
             pass
         elif pilihan == 2:
             bersihkanLayar()
@@ -97,6 +105,22 @@ if __name__ == "__main__":
             jeda()
 
         elif pilihan == 8:
+            bersihkanLayar()
+            print("Studi Kasus:\n")
+            print("Ada 4 mahasiswa: M, N, O, dan P.")
+            print("Dari keempat mahasiswa tersebut akan dipilih 2 orang.")
+            print("Berapa banyak susunan jika 2 orang itu menempati 2 jabatan berbeda (permutasi),")
+            print("dan berapa banyak jika hanya menjadi anggota tim tanpa jabatan (kombinasi)?\n")
+
+            jeda()
+
+            mahasiswa = ['M', 'N', 'O', 'P']
+            jumlahDipilih = 2
+            permutasiDanKombinasi(mahasiswa, jumlahDipilih)
+
+            jeda()
+
+        elif pilihan == 9:
             laki_laki = ['L1', 'L2', 'L3', 'L4', 'L5']
             perempuan = ['P1', 'P2', 'P3', 'P4']
             jumlahDipilih = 3                           
