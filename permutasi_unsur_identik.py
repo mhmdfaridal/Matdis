@@ -35,6 +35,3 @@ def permutasi_unsurIdentik(teks):
     for kata in susunan:
         print(f"{nomor}. {kata}")
         nomor += 1
-    
-teks = "MALAM"
-permutasi_unsurIdentik(teks)

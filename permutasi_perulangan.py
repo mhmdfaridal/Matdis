@@ -9,7 +9,7 @@ def permutasiPerulangan(elemen, r):
 
     susunan = list(itertools.product(elemen, repeat=r))
 
-    print(f"\nPermutasi P = n^r adalah {total}")
+    print(f"\nPermutasi P = n^r adalah {int(total)}")
     print(f"Hasil dari: {proses}")
 
     print("Banyaknya Cara:\n")
