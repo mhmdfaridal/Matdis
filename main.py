@@ -3,6 +3,7 @@ from permutasi_n import permutasiN
 from permutasi_r_dari_n import permutasiRN
 from kombinasi import kombinasi
 from kombinasi_perulangan import kombinasiPerulangan
+from kombinasi_batasan import kombinasiBatasan
 from permutasi_perulangan import permutasiPerulangan
 from permutasi_unsur_identik import permutasi_unsurIdentik
 from permutasi_melingkar import permutasiMelingkar
@@ -93,6 +94,24 @@ if __name__ == "__main__":
             jumlahDipilih = 2
             kombinasi(mahasiswa, jumlahDipilih)
 
+            jeda()
+
+        elif pilihan == 8:
+            laki_laki = ['L1', 'L2', 'L3', 'L4', 'L5']
+            perempuan = ['P1', 'P2', 'P3', 'P4']
+            jumlahDipilih = 3                           
+            
+            bersihkanLayar()
+            print("Studi Kasus:\n")
+            print(f"Dari 5 laki-laki dan 4 perempuan, akan dipilih 3 mahasiswa.")
+            print("Syarat: Tim harus memiliki MINIMAL SATU perempuan.")
+            print("Berapa banyak susunan tim yang mungkin dibuat?\n")
+            
+            jeda()
+            
+            # Memanggil fungsi modul
+            kombinasiBatasan(laki_laki, perempuan, jumlahDipilih)
+            
             jeda()
 
         elif pilihan == 10:
